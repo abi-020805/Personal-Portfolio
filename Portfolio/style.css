@@ -1,0 +1,1217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+#intro{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /* background-image: linear-gradient(to right,black,rgb(10, 10, 65),rgb(33, 3, 60)); */
+    background-image: linear-gradient(rgba(5, 5, 15, 0.65),rgba(15, 10, 45, 0.75),rgba(20, 5, 35, 0.8)),url(./images/image2.png);
+    background-size:cover;
+    z-index: 20;
+    /* animation-duration: 2s;
+    animation-delay: 8s;
+    animation-name: intro;
+    animation-iteration-count: 1; */
+    /* animation-fill-mode: forwards; */
+}
+/* @keyframes intro{
+    from{
+        opacity:1;
+        transform: translateY(0);
+    }
+    to{
+        opacity:0;
+        transform: translateY(-40px);
+    }
+} */
+#intro>h1{
+    height: 100vh;
+    width: 100%;
+    /* font-family: "Dancing Script", cursive; */
+    font-family: "Merienda", cursive;
+    display: flex;
+    color: transparent;
+    justify-content: center;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-name: intro;
+    /* align-content: center; */
+}
+#intro>#name{
+    position: absolute;
+    top: 250px;
+    /* left:600px; */
+    animation-duration: 3s;
+    animation-delay: 0.5s;    
+    animation-name: name;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+#intro>#role{
+    position: absolute;
+    top: 250px;
+    animation-duration: 5s;
+    animation-delay: 2.5s;    
+    animation-name: role;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes name{
+    20%{
+        color: transparent;
+    }
+    80%{
+        color: goldenrod;
+    }
+    100%{
+        font-size: 40px;
+
+    }
+}
+@keyframes role{
+    20%{
+        color: transparent;
+    }
+    90%{
+        color: goldenrod;
+    }
+    100%{
+        font-size: 50px;
+    }
+}
+
+
+#navbar{
+    opacity: 0;
+    height: 50px;
+    width: 100%;
+    border: 2px solid black;
+    background-image: linear-gradient(to right,black,rgb(54, 27, 54),rgb(19, 0, 19));
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation-duration: 0.5s;
+    animation-delay: 7s;
+    animation-name: navbar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes navbar{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#navbar>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 19px;
+    position: relative;
+    top: 13px;
+    list-style: none;
+}
+
+#navbar>ul>a{
+    color: rgb(243, 243, 213);
+    text-decoration: none;
+}
+#navbar>ul>a:hover{
+    cursor: pointer;
+    color:rgb(184, 156, 58);
+}
+
+#about{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    /* background-color: rgb(218, 210, 165); */
+    background-color: black;
+    z-index: 40;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-delay: 7s;
+    animation-name: about;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+}
+@keyframes about{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#about>#parent{
+    height: 90px;
+    width: 100%;
+}
+#about>#parent>h1{
+    position: relative;
+    top: 45px;
+    text-align: center;
+    color: rgb(212, 180, 97);
+    font-family: "Alkatra", system-ui;
+}
+#about>#parent>img{
+    opacity:0;
+    height: 350px;
+    width: 20%;
+    border: 1px solid rgb(248, 208, 248);
+    border-radius: 20px;
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    /* transform: skewY(20deg); */
+    animation-duration: 3s;
+    animation-delay: 8s;
+    animation-name: img;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes img{
+    from{
+        opacity: 1;
+        transform: skewY(40deg);
+    }
+    to{
+        opacity: 1;
+        transform: skewY(0deg);
+    }
+}
+#about>#parent>#name{
+    color: transparent;
+    font-family: "Merienda", cursive;
+    position: absolute;
+    left: 120px;
+    top: 500px;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-name: aboutname;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutname{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(252, 238, 252);
+    }
+}
+#about>#parent>#role{
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    color: transparent;
+    font-size: 30px;
+}
+#about>#parent>#role>li{
+    animation-duration: 2s;
+    /* animation-delay: 11s; */
+    animation-name: aboutrole;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#about>#parent>#role>#role1{
+    animation-delay: 11s;
+}
+#about>#parent>#role>#role2{
+    animation-delay: 11.5s;
+}
+#about>#parent>#role>#role3{
+    animation-delay: 12s;
+}
+#about>#parent>#role>#role4{
+    animation-delay: 12.5s;
+}
+@keyframes aboutrole{
+    from{
+        color: transparent;
+    }
+    to{
+        transform: translate(780px,60px);
+        color: rgb(145, 136, 90);
+    }
+}
+#about>#parent>#role>li>i{
+    animation-duration: 2s;
+    /* animation-delay: 11s; */
+    animation-name: icon;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#about>#parent>#role>#role1>i{
+    animation-delay: 11s;
+}
+#about>#parent>#role>#role2>i{
+    animation-delay: 11.5s;
+}
+#about>#parent>#role>#role3>i{
+    animation-delay: 12s;
+}
+#about>#parent>#role>#role4>i{
+    animation-delay: 12.5s;
+}
+@keyframes icon{
+    from{
+        color: transparent;
+    }
+    to{
+        /* transform: translate(380px,60px); */
+        color: rgb(237, 207, 131);
+    }
+}
+#about>#parent>p{
+    position: absolute;
+    top: 170px;
+    left: 390px;
+    width: 28%;
+    line-height: 1.8;
+    font-size: 18px;
+    color: transparent;
+    animation-duration: 2s;
+    animation-delay: 15s;
+    animation-name: para;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes para{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(246, 236, 246);
+        position: absolute;
+        top: 150px;
+    }
+}
+#Skills{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(
+            rgba(8, 6, 16, 0.45),
+            rgba(19, 0, 19, 0.65)
+        ),url(./images/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#Skills>.parent-card{
+    height: 150px;
+    width: 260px;
+    border: 1px solid rgb(244, 208, 244);
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 25;
+    transform: translate(-50%, -50%);
+}
+#Skills>.parent-card:hover{
+    box-shadow: 0.5px 1px 20px 2px cyan;
+
+}
+#Skills>.parent-card>.child-card{
+    opacity: 0;
+    height: 150px;
+    width: 260px;
+    border: 1px solid rgb(244, 208, 244);
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    transform: translate(-50%,-50%);
+    animation-duration: 5s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#Skills>.parent-card:hover>.child-card{
+    border-color: #B58AE8;
+    box-shadow: 0.5px 1px 20px 2px rgb(241, 130, 241);
+}
+#Skills>.parent-card>.child-card:hover{
+    height: 220px;
+    width: 270px;
+}
+#Skills>.parent-card>#cards1{
+    animation-name: card1;
+}
+#Skills>.parent-card>#cards2{
+    animation-name: card2;
+}
+#Skills>.parent-card>#cards3{
+    animation-name: card3;
+}
+#Skills>.parent-card>#cards4{
+    animation-name: card4;
+}
+@keyframes card1{
+    to{
+        opacity: 1;
+        transform: translate(-300px,-200px);
+    }
+}
+@keyframes card2{
+    to{
+        opacity: 1;
+        transform: translate(-300px,50px);
+    }
+}
+@keyframes card3{
+    to{
+        opacity: 1;
+        transform: translate(50px,50px);
+    }
+}
+@keyframes card4{
+    to{
+        opacity: 1;
+        transform: translate(50px,-200px);
+    }
+}
+#Skills>.parent-card>h1{
+    color: rgb(192, 247, 247);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 35%;
+    font-size: 40px;
+}
+#Skills>.parent-card>.child-card>h1{
+    color: rgb(225, 186, 205);
+    text-align: center;
+    position: relative;
+    top: 35%;
+}
+#Skills>.parent-card>#cards2>h1{
+    position: relative;
+    top: 25%;
+}
+#Skills>.parent-card>.child-card>h3{
+    color: transparent;
+}
+#Skills>.parent-card>#cards1>h3{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#Skills>.parent-card:hover>#cards1>#PL1{
+    animation-name: pl1;
+}
+@keyframes pl1{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-20px);
+    }
+}
+#Skills>.parent-card:hover>#cards1>#PL2{
+    animation-name: pl2;
+}
+@keyframes pl2{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-10px);
+    }
+}
+#Skills>.parent-card:hover>#cards1>#PL3{
+    animation-name: pl3;
+}
+@keyframes pl3{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,0px);
+    }
+}
+#Skills>.parent-card:hover>#cards1>#PL4{
+    animation-name: pl4;
+}
+@keyframes pl4{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,10px);
+    }
+}
+#Skills>.parent-card>#cards2>h3{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#Skills>.parent-card:hover>#cards2>#BE1{
+    animation-name: be1;
+}
+@keyframes be1{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-60px);
+    }
+}
+#Skills>.parent-card:hover>#cards2>#BE2{
+    animation-name: be2;
+}
+@keyframes be2{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-50px);
+    }
+}
+#Skills>.parent-card:hover>#cards2>#BE3{
+    animation-name: be3;
+}
+@keyframes be3{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-40px);
+    }
+}
+#Skills>.parent-card:hover>#cards2>#BE4{
+    animation-name: be4;
+}
+@keyframes be4{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(-120px,-30px);
+    }
+}
+#Skills>.parent-card>#cards3>h3{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#Skills>.parent-card:hover>#cards3>#DT1{
+    animation-name: dt1;
+}
+@keyframes dt1{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,-30px);
+    }
+}
+#Skills>.parent-card:hover>#cards3>#DT2{
+    animation-name: dt2;
+}
+@keyframes dt2{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,-20px);
+    }
+}
+#Skills>.parent-card:hover>#cards3>#DT3{
+    animation-name: dt3;
+}
+@keyframes dt3{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,-10px);
+    }
+}
+#Skills>.parent-card:hover>#cards3>#DT4{
+    animation-name: dt4;
+}
+@keyframes dt4{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,0px);
+    }
+}
+#Skills>.parent-card:hover>#cards3>#DT5{
+    animation-name: dt5;
+}
+@keyframes dt5{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,10px);
+    }
+}#Skills>.parent-card>#cards4>h3{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#Skills>.parent-card:hover>#cards4>#FE1{
+    animation-name: fe1;
+}
+@keyframes fe1{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,-20px);
+    }
+}
+#Skills>.parent-card:hover>#cards4>#FE2{
+    animation-name: fe2;
+}
+@keyframes fe2{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,-10px);
+    }
+}
+#Skills>.parent-card:hover>#cards4>#FE3{
+    animation-name: fe3;
+}
+@keyframes fe3{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,0px);
+    }
+}
+#Skills>.parent-card:hover>#cards4>#FE4{
+    animation-name: fe4;
+}
+@keyframes fe4{
+    from{
+        color: transparent;
+    }
+    to{
+        color: rgb(208, 229, 229);
+        transform: translate(290px,10px);
+    }
+}
+#Projects{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-image: linear-gradient(to right,black,rgb(45, 1, 45)); */
+    background-color: rgb(35, 1, 35);
+    background-image:
+        radial-gradient(cyan 1px,transparent 2px),
+        radial-gradient(hotpink 1px, transparent 2px),
+        radial-gradient(#00E5FF 1.5px, transparent 3px),
+        radial-gradient(#A855F7 1px, transparent 2px);
+
+    background-size:
+        180px 160px,
+        240px 210px,
+        310px 270px,
+        200px 230px;
+
+    background-position:
+        20px 30px,
+        100px 80px,
+        50px 150px,
+        160px 40px;
+}
+#Projects>h1{
+    color: rgb(243, 201, 243);
+    text-align: center;
+    /* font-family: "Anton", sans-serif; */
+    font-family: "Courgette", cursive;
+    position: relative;
+    top: 60px;
+    font-size: 30px;
+}
+#Projects>#dash{
+    position: relative;
+    top: 45px;
+    left: 49%;
+    display: inline-block;
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    /* animation-duration: 2s; */
+    animation-name: dash;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+    animation-fill-mode: forwards;
+}
+@keyframes dash{
+    from{
+        width: 30px;
+    }
+    to{
+        height: 1px;
+        width: 80px;
+        background-color: lightcyan;
+    }
+}
+#Projects>.pro{
+    height: 400px;
+    width: 17%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(rgb(27, 27, 40),rgb(11, 1, 11)) padding-box,
+    linear-gradient(to right,cyan,pink);
+    box-shadow: 1px 2px 5px 0.2px cyan;
+    position: absolute;
+    top: 130px;
+    /* left: 2%; */
+}
+#Projects>#p1{
+    position: absolute;
+    top: 130px;
+    left: 2%;
+    z-index: 1;
+}
+#Projects>#p2{
+    position: absolute;
+    /* top: 130px; */
+    left: 4%;
+    z-index:2;
+}
+#Projects:hover>#p2{
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-name: p2;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes p2{
+    to{
+        transform: translate(222px,0px);
+    }
+}
+#Projects>#p3{
+    position: absolute;
+    top: 130px;
+    left: 6%;
+    z-index: 3;
+}
+#Projects:hover>#p3{
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-name: p3;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes p3{
+    to{
+        transform: translate(444px,0px);
+    }
+}
+#Projects>#p4{
+    position: absolute;
+    top: 130px;
+    left: 8%;
+    z-index:4;
+}
+#Projects:hover>#p4{
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-name: p4;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes p4{
+    to{
+        transform: translate(666px,0px);
+    }
+}
+#Projects>#p5{
+    position: absolute;
+    top: 130px;
+    left: 10%;
+    background-color: lavender;
+    z-index: 5;
+}
+#Projects:hover>#p5{
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-name: p5;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes p5{
+    to{
+        transform: translate(888px,0px);
+    }
+}
+#Projects>.pro>img{
+    height: 150px;
+    width: 170px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+#Projects>.pro>h3{
+    color:rgb(237, 229, 245);
+    font-size: 17px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#Projects>.pro>h4{
+    color:  rgb(235, 222, 173);
+    font-size: 13px;
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#Projects>#p1>a{
+    text-decoration: none;
+}
+#Projects>#p1>a>#button{
+    height: 30px;
+    width: 120px;
+    border: 0.5px solid pink;
+    box-shadow: 1px 2px 5px 2px rgb(146, 95, 120);
+    background-image: linear-gradient(to right,rgb(168, 213, 213),rgb(155, 155, 215),rgb(224, 157, 224));
+    border-radius: 20px;
+    position: relative;
+    left: 22%;
+    top: 100px;
+    text-decoration: none;
+    /* text-align: center; */
+}
+#Projects>#p1>a>#button>summary{
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    color: rgb(61, 4, 61);
+    list-style: none;
+}
+#Projects>.pro>#button{
+    height: 30px;
+    width: 120px;
+    border: 0.5px solid pink;
+    box-shadow: 1px 2px 5px 2px rgb(146, 95, 120);
+    background-image: linear-gradient(to right,rgb(168, 213, 213),rgb(155, 155, 215),rgb(224, 157, 224));
+    border-radius: 20px;
+    position: relative;
+    left: 22%;
+    top: 100px;
+    /* text-align: center; */
+}
+#Projects>.pro>#button>summary{
+    text-align: center;
+    position: relative;
+    top: 5px;
+    color: rgb(61, 4, 61);
+    list-style: none;
+}
+#Projects>.pro>#button>summary+div{
+    height: 400px;
+    width: 700px;
+    border: 0.5px solid rgb(249, 195, 249);
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px 2px plum;
+    background-color: black;
+    position: absolute;
+    left: -580px;
+    top: -315px;
+}
+
+#Projects>#p5>#button>#card5>h1{
+    font-size: 20px;
+    color: lightgoldenrodyellow;
+}
+#Projects>#p5>#button>#card5>#overview{
+    position: absolute;
+    left: 10px;
+}
+#Projects>.pro>#button>#card5>#tech{
+    position: absolute;
+    right: 100px;
+    top: 180px;
+}
+#Projects>.pro>p{
+    color: rgb(249, 255, 255);
+    font-size: 11px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#Experience{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(to right,rgb(33, 21, 33),rgb(12, 4, 12),rgb(22, 1, 22));
+}
+#Experience>#exp{
+    text-align: center;
+    color: rgb(245, 233, 255);
+    position: relative;
+    top: 60px;
+    font-family: "Alkatra", system-ui;
+}
+#Experience>.intern{
+    height: 150px;
+    width: 300px;
+    border: 1px solid transparent;
+    z-index: 10;
+    background: linear-gradient(to right,black,rgb(24, 1, 24),rgb(87, 41, 87),rgb(159, 109, 159))padding-box,linear-gradient(to right,transparent,transparent,rgb(240, 214, 240))border-box;
+    
+    border-radius: 40px;
+    
+}
+#Experience>#intern1{
+    position: absolute;
+    top: 170px;
+    left: 20%;
+}
+#Experience>#intern2{
+    position: absolute;
+    top: 380px;
+    left: 20%;
+}
+#Experience>.intern>#domain{
+    color:blanchedalmond;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 30%;
+    left: 15%;
+}
+#Experience>.intern>#company{
+    color:rgb(249, 245, 238);
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 40%;
+    left: 15%;
+}
+#Experience>.intern>#year{
+    color:rgb(158, 122, 158);
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -10%;
+    left: 5%;
+}
+#Experience>.des{
+    height: 150px;
+    width: 700px;
+    border: 1px solid transparent;
+    background: linear-gradient(rgb(23, 2, 42),rgb(8, 0, 16))padding-box,linear-gradient(to right,transparent, transparent,rgb(160, 125, 193))border-box;
+    border-radius: 60px;
+    background-color: rgb(8, 0, 16);
+    z-index: 9;
+    position: absolute;
+    top: 170px;
+    left: 30%;
+   color: transparent;
+
+}
+#Experience>#des1{
+    opacity: 0;
+    position: absolute;
+    top: 170px;
+    left: -15%;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-name: des1;
+    animation-iteration-count: infinite;
+}
+#Experience>#intern1:hover~#des1{
+    animation-play-state: paused;
+}
+#Experience>#des2{
+    opacity: 0;
+    position: absolute;
+    top: 380px;
+    left: -15%;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-name: des2;
+    animation-iteration-count: infinite;
+}
+#Experience>#intern2:hover~#des2{
+    animation-play-state: paused;
+}
+@keyframes des1{
+    20%{
+        opacity:0;
+    }
+    40%{
+        left:20%;
+        opacity: 0;
+    }
+    60%{
+        left:30%;
+        opacity:1;
+    }
+    80%{
+        left:30%;
+        opacity: 1;
+    }
+    100%{
+        left:0%;
+        opacity: 0;
+    }
+}
+@keyframes des2{
+    20%{
+        opacity:0;
+    }
+    40%{
+        left:20%;
+        opacity: 0;
+    }
+    60%{
+        left:30%;
+        opacity:1;
+    }
+    80%{
+        left:30%;
+        opacity: 1;
+    }
+    100%{
+        left:0%;
+        opacity: 0;
+    }
+}
+
+#Experience>.des>p{
+    color: aliceblue;
+    padding-left: 200px;
+    padding-top: 30px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+#Contact{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(8, 6, 16),rgb(18, 2, 34));
+}
+#Contact>#center{
+    height: 100px;
+    width: 100px;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 20px 3px cyan;
+    position: absolute;
+    top:44%;
+    left: 47%;
+    border-radius: 100%;
+    animation-duration: 1s;
+    animation-name: rot2;
+    animation-iteration-count: infinite;
+}
+@keyframes rot2{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(360deg);
+
+    }
+}
+#Contact>#center>h2{
+    text-align: center;
+    color: lightcyan;
+    position: relative;
+    top: 15px;
+}
+#Contact>.cir{
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: black;
+    box-shadow: 2px 2px 20px 0.5px cyan;
+    animation-duration: 1s;
+    animation-name: rot1;
+    animation-iteration-count: infinite;
+}
+@keyframes rot1{
+    from{
+        /* transform: rotateY(180deg); */
+        
+    }
+}
+#Contact>a>#in{
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: black;
+    box-shadow: 2px 2px 20px 0.5px cyan;
+    animation-duration: 1s;
+    animation-name: rot1;
+    animation-iteration-count: infinite;
+}
+#Contact>a>#in{
+    position: absolute;
+    top:64%;
+    left: 38%;
+    color: cyan;
+}
+#Contact>a>#in>i{
+    color: lightcyan;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 23px;
+}
+#Contact>a>#mail{
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: black;
+    box-shadow: 2px 2px 20px 0.5px cyan;
+    animation-duration: 1s;
+    animation-name: rot1;
+    animation-iteration-count: infinite;
+}
+#Contact>a>#mail>i{
+    color: lightcyan;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 23px;
+}
+#Contact>a>#mail{
+    position: absolute;
+    top:24%;
+    left: 49%;
+}
+#Contact>a>#git{
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: black;
+    box-shadow: 2px 2px 20px 0.5px cyan;
+    animation-duration: 1s;
+    animation-name: rot1;
+    animation-iteration-count: infinite;
+}
+#Contact>a>#git>i{
+    color: lightcyan;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 23px;
+}
+#Contact>a>#git{
+    position: absolute;
+    top:60%;
+    left: 64%;
+}
+#Contact>#lc{
+    height: 300px;
+    width: 400px;
+    border: 1px solid rgb(147, 147, 212);
+    position: absolute;
+    left: 35%;
+    top: 28%;
+    border-radius: 100%;
+    box-shadow: 1px 1px 15px 0.5px cyan;
+    animation-duration: 1s;
+    animation-name: rot;
+    animation-iteration-count: infinite;
+}
+@keyframes rot{
+    from{
+        /* transform: rotate(180deg); */
+        
+    }
+}
+#Contact>.cir>i{
+    color: lightcyan;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    font-size: 23px;
+}
+#Contact>h1{
+    color: white;
+    position: relative;
+    top: 60px;
+    text-align: center;
+}
+#Contact>#start{
+    color: rgb(134, 100, 167);
+    position: relative;
+    top: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#Contact>#end{
+    color: rgb(134, 100, 167);
+    position: relative;
+    top: 450px;
+    text-align: center;
+    letter-spacing: 4px;
+}
